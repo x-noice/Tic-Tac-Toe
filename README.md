@@ -1,4 +1,4 @@
-<img src='https://github.com/x-noice/Tic-Tac-Toe/assets/150224928/6c90eaa7-c52e-4c2a-8a6e-0b6102d684b3' width='100px'>
+<img src='https://github.com/x-noice/Tic-Tac-Toe/assets/150224928/c035894c-0e3e-4e95-afd3-0d2d21a17c8a' width='100px'>
 <h3>Tic-Tac-Toe</h3>
 <p>
   An awesome Tic-Tac-Toe python project with built in AI.
@@ -33,7 +33,7 @@
 Download the project file by following the steps given below ➡<br>
 • Visit <a href='https://github.com/x-noice/Tic-Tac-Toe/blob/main/tic-tac-toe.py'>this</a> link.<br>
 • Then do as shown below.
-![4](https://github.com/x-noice/Tic-Tac-Toe/assets/150224928/5bac8b43-6c6f-4af0-951a-11b428ed9952)
+![4](https://github.com/x-noice/Tic-Tac-Toe/assets/150224928/2b2faca9-5481-4ba0-bf88-3910d8253151)
 
 ## License
 Distributed under the MIT License. See [LICENSE](https://github.com/x-noice/Tic-Tac-Toe/blob/main/LICENSE.md) for more information.
