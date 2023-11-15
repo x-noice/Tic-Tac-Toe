@@ -1,7 +1,7 @@
 <img src='https://github.com/x-noice/Tic-Tac-Toe/assets/150224928/c035894c-0e3e-4e95-afd3-0d2d21a17c8a' width='100px'>
 <h3>Tic-Tac-Toe</h3>
 <p>
-  An awesome Tic-Tac-Toe python project with built in AI.
+  An awesome Tic-Tac-Toe python project with built-in AI.
   <br/>
   <a href="https://replit.com/@raghavsrvtryan/Tic-Tac-Toe#main.py">View Demo</a>
   .
