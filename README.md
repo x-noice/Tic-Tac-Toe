@@ -21,9 +21,9 @@
 
 ## About The Project
 
-![1](https://github.com/x-noice/Tic-Tac-Toe/assets/150224928/eb7b176a-057a-48bf-a22d-ec82154ebcc9)
-![2](https://github.com/x-noice/Tic-Tac-Toe/assets/150224928/f229a31f-78c9-4836-9f2d-5dace00ab0a1)
-![3](https://github.com/x-noice/Tic-Tac-Toe/assets/150224928/ece182a2-11c2-47f5-a964-ce9d209cfa8c)
+![1](https://github.com/x-noice/Tic-Tac-Toe/assets/150224928/b9bf638f-3cc7-404e-9463-46e6595c599e)
+![2](https://github.com/x-noice/Tic-Tac-Toe/assets/150224928/6d92c603-f16b-45e0-acbd-2f839f60c6df)
+![3](https://github.com/x-noice/Tic-Tac-Toe/assets/150224928/4e0877dd-6f21-47c5-997b-05c8c9ddefa5)
 
 • It is a tic tac toe game with option to play against a friend or AI.<br>
 • It is built with python concepts like functions, conditional statements, loops and random module.<br>
