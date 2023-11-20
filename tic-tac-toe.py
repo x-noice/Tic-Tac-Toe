@@ -35,12 +35,12 @@ credit ='''
  |_|  |_|\\__,_|\\__,_|\\___|  |____/ \\__, |
                                    |___/ 
 
- __  __     _ __   ___ (_) ___ ___ 
- \\ \\/ /____| '_ \\ / _ \\| |/ __/ _ \\
-  >  <_____| | | | (_) | | (_|  __/
- /_/\\_\\    |_| |_|\\___/|_|\\___\\___|
-                                                                                                                                                   
-https://github.com/x-noice
+  ____             _                    ____       _                _                   
+ |  _ \\ __ _  __ _| |__   __ ___   __  / ___| _ __(_)_   ____ _ ___| |_ __ ___   ____ _ 
+ | |_) / _` |/ _` | '_ \\ / _` \\ \\ / /  \\___ \\| '__| \\ \\ / / _` / __| __/ _` \\ \\ / / _` |
+ |  _ < (_| | (_| | | | | (_| |\\ V /    ___) | |  | |\\ V / (_| \\__ \\ || (_| |\\ V / (_| |
+ |_| \\_\\__,_|\\__, |_| |_|\\__,_| \\_/    |____/|_|  |_| \\_/ \\__,_|___/\\__\\__,_| \\_/ \\__,_|
+             |___/                                                                      
 '''
 #How to play guide
 def how_to_play():
@@ -108,7 +108,12 @@ def check_win(current_player):
 # Function for the player to make a move
 def manual_move(move):
     while True:
-        mm = int(input(f'({move}) Enter your move: ')) - 1
+        mm = input(f'({move}) Enter your move: ')
+        if(mm.isnumeric()):
+            mm = eval(mm)-1
+        else:
+            print('⚠ Invalid move. Try again.')
+            continue
         if 0 <= mm and mm <= 8 and grid[mm] == empty:
             grid[mm] = move
             if(move==opponent):
@@ -122,11 +127,11 @@ while(True):
     player_win = False; opp_win = False; grid_size = 3; player = 'X'; opponent = 'O'; empty = '_'; grid = ['_', '_', '_', '_', '_', '_', '_', '_', '_']; opp_player = 'computer';
     while(True):
         # Choose the opponent (computer or friend) to play with
-        plyr_choice = int(input('Who would you like to play with?\n[1]A friend\t[2]Computer\nUse digits to enter your choice: '))
-        if(plyr_choice==1):
+        plyr_choice = input('Who would you like to play with?\n[1]A friend\t[2]Computer\nUse digits to enter your choice: ')
+        if(plyr_choice=='1'):
             opp_player='friend'
             break
-        elif(plyr_choice==2):
+        elif(plyr_choice=='2'):
             opp_player='computer'
             break
         else:
@@ -159,8 +164,8 @@ while(True):
             print_grid()
             print('It was a draw!')
             break
-    play_again_choice = int(input('Would you like to play another game?\n[1]Yes\t[2]No\nEnter your choice: '))
-    if(play_again_choice==1):
+    play_again_choice = input('Would you like to play another game?\n[1]Yes\t[2]No\nEnter your choice: ')
+    if(play_again_choice=='1'):
         continue
     else:
         break
