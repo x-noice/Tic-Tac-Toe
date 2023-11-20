@@ -35,12 +35,12 @@ credit ='''
  |_|  |_|\\__,_|\\__,_|\\___|  |____/ \\__, |
                                    |___/ 
 
-  ____             _                    ____       _                _                   
- |  _ \\ __ _  __ _| |__   __ ___   __  / ___| _ __(_)_   ____ _ ___| |_ __ ___   ____ _ 
- | |_) / _` |/ _` | '_ \\ / _` \\ \\ / /  \\___ \\| '__| \\ \\ / / _` / __| __/ _` \\ \\ / / _` |
- |  _ < (_| | (_| | | | | (_| |\\ V /    ___) | |  | |\\ V / (_| \\__ \\ || (_| |\\ V / (_| |
- |_| \\_\\__,_|\\__, |_| |_|\\__,_| \\_/    |____/|_|  |_| \\_/ \\__,_|___/\\__\\__,_| \\_/ \\__,_|
-             |___/                                                                      
+ __  __     _ __   ___ (_) ___ ___ 
+ \\ \\/ /____| '_ \\ / _ \\| |/ __/ _ \\
+  >  <_____| | | | (_) | | (_|  __/
+ /_/\\_\\    |_| |_|\\___/|_|\\___\\___|
+                                                                                                                                                   
+https://github.com/x-noice
 '''
 #How to play guide
 def how_to_play():
@@ -135,6 +135,7 @@ while(True):
             opp_player='computer'
             break
         else:
+            print('⚠ Invalid choice. Try again.')
             continue
     print_grid()
     # Input loop for the game
@@ -153,7 +154,6 @@ while(True):
                 manual_move(opponent)
             # Check if the opponent has won
             if check_win(opponent) == True:
-                print_grid()
                 if(opp_player=='computer'):
                     print('Computer won!')
                 else:
@@ -164,7 +164,15 @@ while(True):
             print_grid()
             print('It was a draw!')
             break
-    play_again_choice = input('Would you like to play another game?\n[1]Yes\t[2]No\nEnter your choice: ')
+    # Play again choice
+    play_again_choice = None
+    while True:
+        play_again_choice = input('Would you like to play another game?\n[1]Yes\t[2]No\nEnter your choice: ')
+        if(play_again_choice!='1' and play_again_choice!='2'):
+            print('⚠ Invalid choice. Try again.')
+            continue
+        else:
+            break
     if(play_again_choice=='1'):
         continue
     else:
