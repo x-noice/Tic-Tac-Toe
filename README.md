@@ -36,6 +36,6 @@ Download the project file by following the steps given below ➡<br>
 ![4](https://github.com/x-noice/Tic-Tac-Toe/assets/150224928/2b2faca9-5481-4ba0-bf88-3910d8253151)
 
 ## License
-Distributed under the MIT License. See [LICENSE](https://github.com/x-noice/Tic-Tac-Toe/blob/main/LICENSE.md) for more information.
+Distributed under the MIT License. See [LICENSE](https://github.com/x-noice/Tic-Tac-Toe/blob/main/LICENSE) for more information.
 ## Author
 * **x-noice** - *Computer Science Student* - [x-noice](https://github.com/x-noice/)
