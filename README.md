@@ -3,7 +3,7 @@
 <p>
   An awesome Tic-Tac-Toe python project with built-in AI.
   <br/>
-  <a href="https://replit.com/@raghavsrvtryan/Tic-Tac-Toe#main.py">View Demo</a>
+  <a href="https://replit.com/@x-noice/Tic-Tac-Toe">View Demo</a>
   .
   <a href="https://github.com/x-noice/Tic-Tac-Toe/issues">Report Bug</a>
   .
