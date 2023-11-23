@@ -154,7 +154,6 @@ def manual_move(curr_player):
             continue
 # Main game loop
 while(True):
-    player_win = False; opp_win = False; grid = ['_', '_', '_', '_', '_', '_', '_', '_', '_']; opp_player = 'computer';
     # Choose opponent type (friend or computer)
     while(True):
         player_choice = input('Who would you like to play with?\n[1]A friend\t[2]Computer\nUse digits to enter your choice: ')
@@ -203,6 +202,8 @@ while(True):
             break
     if(play_again_choice=='1'):
         print('-'*36)
+        # Reset game variables before starting a new game
+        player_win = False; opp_win = False; grid = ['_', '_', '_', '_', '_', '_', '_', '_', '_']; opp_player = 'computer';
         continue
     else:
         break
