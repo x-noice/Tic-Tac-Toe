@@ -4,7 +4,7 @@ opp_win = False  # Track if the opponent (computer or friend) has won
 grid_size = 3
 player = 'X'
 opponent = 'O'
-empty = '_'
+empty_cell = '_'
 grid = ['_', '_', '_', '_', '_', '_', '_', '_', '_']  # The game grid
 opp_player = 'computer'  # Default opponent is the computer
 # Define win conditions for the game
@@ -87,23 +87,23 @@ def comp_move():
     """
     # If there are two Xs, try to block the player by placing an O
     for i in win_conditions:
-        if (grid[i[0]] == opponent and grid[i[1]] == opponent and grid[i[2]] == empty) or (grid[i[1]] == opponent and grid[i[2]] == opponent and grid[i[0]] == empty) or (grid[i[0]] == opponent and grid[i[2]] == opponent and grid[i[1]] == empty):
+        if (grid[i[0]] == opponent and grid[i[1]] == opponent and grid[i[2]] == empty_cell) or (grid[i[1]] == opponent and grid[i[2]] == opponent and grid[i[0]] == empty_cell) or (grid[i[0]] == opponent and grid[i[2]] == opponent and grid[i[1]] == empty_cell):
             for pos in i:
-                if(grid[pos]==empty):
+                if(grid[pos]==empty_cell):
                     grid[pos]=opponent
                     opp_grid(pos)
                     return
     # If there are two Os, complete the win
     for i in win_conditions:
-        if (grid[i[0]] == player and grid[i[1]] == player and grid[i[2]] == empty) or (grid[i[1]] == player and grid[i[2]] == player and grid[i[0]] == empty) or (grid[i[0]] == player and grid[i[2]] == player and grid[i[1]] == empty):
+        if (grid[i[0]] == player and grid[i[1]] == player and grid[i[2]] == empty_cell) or (grid[i[1]] == player and grid[i[2]] == player and grid[i[0]] == empty_cell) or (grid[i[0]] == player and grid[i[2]] == player and grid[i[1]] == empty_cell):
             for pos in i:
-                if(grid[pos]==empty):
+                if(grid[pos]==empty_cell):
                     grid[pos]=opponent
                     opp_grid(pos)
                     return
     # If neither winning nor blocking moves are available, make a random move
     comp_int = random.randint(0, 8)
-    while grid[comp_int]!=empty:
+    while grid[comp_int]!=empty_cell:
         comp_int = random.randint(0, 8)
     grid[comp_int] = opponent
     opp_grid(comp_int)
@@ -115,7 +115,7 @@ def check_draw():
     - bool: True if the game is a draw, False otherwise.
     """
     if player_win == False and opp_win == False:
-        return empty not in grid
+        return empty_cell not in grid
 def check_win(current_player):
     """
     Check if the specified player has won the game.
@@ -144,7 +144,7 @@ def manual_move(curr_player):
         else:
             print('⚠ Invalid move. Try again.')
             continue
-        if 0 <= move_input and move_input <= 8 and grid[move_input] == empty:
+        if 0 <= move_input and move_input <= 8 and grid[move_input] == empty_cell:
             grid[move_input] = curr_player
             if(curr_player==opponent):
                 print_grid()
