@@ -106,18 +106,18 @@ def check_win(current_player):
         if grid[win_condition[0]] == current_player and grid[win_condition[1]] == current_player and grid[win_condition[2]] == current_player:
             return True
 # Function for the player to make a move
-def manual_move(move):
+def manual_move(curr_player):
     while True:
-        mm = input(f'({move}) Enter your move: ')
-        if(mm.isnumeric()):
-            mm = eval(mm)-1
+        move_input = input(f'({curr_player}) Enter your move: ')
+        if(move_input.isnumeric()):
+            move_input = eval(move_input)-1
         else:
             print('⚠ Invalid move. Try again.')
             continue
-        if 0 <= mm and mm <= 8 and grid[mm] == empty:
-            grid[mm] = move
-            if(move==opponent):
-                opp_grid(mm)
+        if 0 <= move_input and move_input <= 8 and grid[move_input] == empty:
+            grid[move_input] = curr_player
+            if(curr_player==opponent):
+                opp_grid(move_input)
             break
         else:
             print('⚠ Invalid move. Try again.')
@@ -167,6 +167,7 @@ while(True):
     # Play again choice
     play_again_choice = None
     while True:
+        print('-'*36)
         play_again_choice = input('Would you like to play another game?\n[1]Yes\t[2]No\nEnter your choice: ')
         if(play_again_choice!='1' and play_again_choice!='2'):
             print('⚠ Invalid choice. Try again.')
@@ -174,6 +175,7 @@ while(True):
         else:
             break
     if(play_again_choice=='1'):
+        print('-'*36)
         continue
     else:
         break
