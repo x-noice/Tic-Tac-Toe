@@ -142,7 +142,7 @@ def manual_move(curr_player):
         if(move_input.isnumeric()):
             move_input = eval(move_input)-1
         else:
-            print('⚠ Invalid move. Try again.')
+            print('⚠ Invalid move. Try again.\n','-'*26,sep='')
             continue
         if 0 <= move_input and move_input <= 8 and grid[move_input] == empty_cell:
             grid[move_input] = curr_player
@@ -150,7 +150,7 @@ def manual_move(curr_player):
                 print_grid()
             break
         else:
-            print('⚠ Invalid move. Try again.')
+            print('⚠ Invalid move. Try again.\n','-'*26,sep='')
             continue
 # Main game loop
 while(True):
