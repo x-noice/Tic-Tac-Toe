@@ -164,7 +164,7 @@ while(True):
             opp_player='computer'
             break
         else:
-            print('⚠ Invalid choice. Try again.')
+            print('⚠ Invalid choice. Try again.\n','-'*32,sep='')
             continue
     print_grid()
     # Input loop for the game
